@@ -33,7 +33,11 @@ class MainActivity : AppCompatActivity() {
         @Suppress("UNUSED_VARIABLE")
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
         val navController = this.findNavController(R.id.myNavHostFragment)
+        drawerLayout = binding.drawerLayout
+
         NavigationUI.setupWithNavController(binding.navView, navController)
+
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
